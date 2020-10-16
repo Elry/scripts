@@ -56,9 +56,9 @@ $dArr
 [System.Collections.ArrayList]$array = @()
 # also pass values: $array = (1,2,3,4)
 $array.GetType()
-$array.Add(1) > null
-$array.Add(2) > null
-$array.Add(3) > null
+$array.Add(1)
+$array.Add(2)
+$array.Add(3)
 $array.RemoveAt($array.Count-1)
 #self explanatory
 $array.Reverse()
@@ -93,3 +93,17 @@ $var = 2
 if($var -gt 5){ Write-Output "$var is greater than 5"}
 elseif($var -lt 5){ Write-Output "$var is smaller than 5" }
 else{ Write-Output "$var equal to 5" }
+
+# loops
+$x = 0
+$a = ("a","b","c","d")
+foreach ($item in $a) {
+  "counting: {0}" -f $item
+}
+for($i=0; $i -le $a.Count-1; $i++){
+  Write-Host $i, $a[$i]
+}
+while($x -lt 4){
+  Write-Output $x
+  $x += 1
+}
