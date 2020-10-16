@@ -107,3 +107,8 @@ while($x -lt 4){
   Write-Output $x
   $x += 1
 }
+
+
+try{ throw "err" }
+catch{ Write-Output $Error.ExceptionMessage; }
+finally{ Write-Output "clear" }
