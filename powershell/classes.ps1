@@ -3,17 +3,11 @@ class Instrument{
   [string]$family
 }
 
-$instrument = [Instrument]::new()
-$instrument.type = "String instrument"
-$instrument.family = "Flutes"
-
-# $instrument
-
 class Guitar : Instrument{
-    [string]$brand
-    [string]$subType
-    [string]$modelType
-    [string]$modelNumber
+  [string]$brand
+  [string]$subType
+  [string]$modelType
+  [string]$modelNumber
 }
 
 $mGuitar = [Guitar]::new()
